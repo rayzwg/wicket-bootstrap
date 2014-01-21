@@ -7,7 +7,6 @@ import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
 
 /**
  * Tests the {@link NotificationPanel} component
@@ -38,10 +37,11 @@ public class NotificationPanelTest  extends WicketApplicationTest{
     @Test
     public void notificationMessageIsRendered() {
         NotificationPanel panel = new NotificationPanel(id());
-        panel.error(new NotificationMessage(Model.of("test")));
+        NotificationMessage message = new NotificationMessage(Model.of("test"));
+        panel.error(message);
 
         startComponentInPage(panel);
-        tester().assertErrorMessages("test");
+        tester().assertErrorMessages(message);
     }
 
     @Test

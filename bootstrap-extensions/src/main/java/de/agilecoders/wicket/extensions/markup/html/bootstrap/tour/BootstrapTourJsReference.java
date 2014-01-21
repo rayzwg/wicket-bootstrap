@@ -27,7 +27,7 @@ public class BootstrapTourJsReference extends JavaScriptResourceReference {
     }
 
     @Override
-    public Iterable<? extends HeaderItem> getDependencies() {
+    public List<HeaderItem> getDependencies() {
         List<HeaderItem> dependencies = new ArrayList<HeaderItem>();
         for (HeaderItem dep : super.getDependencies()) {
             dependencies.add(dep);

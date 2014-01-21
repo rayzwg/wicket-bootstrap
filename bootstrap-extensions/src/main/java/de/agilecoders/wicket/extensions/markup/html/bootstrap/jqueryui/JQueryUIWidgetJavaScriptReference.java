@@ -1,12 +1,12 @@
 package de.agilecoders.wicket.extensions.markup.html.bootstrap.jqueryui;
 
-import com.google.common.collect.Lists;
-import de.agilecoders.wicket.webjars.request.resource.WebjarsJavaScriptResourceReference;
-import org.apache.wicket.Application;
+import java.util.List;
+
 import org.apache.wicket.markup.head.HeaderItem;
 import org.apache.wicket.markup.head.JavaScriptHeaderItem;
 
-import java.util.List;
+import com.google.common.collect.Lists;
+import de.agilecoders.wicket.webjars.request.resource.WebjarsJavaScriptResourceReference;
 
 /**
  * JavaScript resource reference for jqueryui.widget.js
@@ -34,7 +34,7 @@ public class JQueryUIWidgetJavaScriptReference extends WebjarsJavaScriptResource
     }
 
     @Override
-    public Iterable<? extends HeaderItem> getDependencies() {
+    public List<HeaderItem> getDependencies() {
         final List<HeaderItem> dependencies = Lists.newArrayList(super.getDependencies());
         dependencies.add(JQueryUICoreJavaScriptReference.asHeaderItem());
 

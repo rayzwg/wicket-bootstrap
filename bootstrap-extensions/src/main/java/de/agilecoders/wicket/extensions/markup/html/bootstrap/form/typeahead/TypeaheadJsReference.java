@@ -20,7 +20,7 @@ public class TypeaheadJsReference extends WebjarsJavaScriptResourceReference {
     }
 
     @Override
-    public Iterable<? extends HeaderItem> getDependencies() {
+    public List<HeaderItem> getDependencies() {
         List<HeaderItem> dependencies = new ArrayList<HeaderItem>();
         dependencies.add(JavaScriptHeaderItem.forReference(BootstrapJavaScriptReference.instance()));
         return dependencies;

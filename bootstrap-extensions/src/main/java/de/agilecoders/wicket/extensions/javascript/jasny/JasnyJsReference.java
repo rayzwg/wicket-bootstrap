@@ -24,7 +24,7 @@ public class JasnyJsReference extends JQueryPluginResourceReference
     }
 
     @Override
-    public Iterable<? extends HeaderItem> getDependencies()
+    public List<HeaderItem> getDependencies()
     {
         List<HeaderItem> deps = new ArrayList<HeaderItem>();
         for (HeaderItem dep : super.getDependencies()) {
